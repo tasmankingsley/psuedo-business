@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Checkout</title>
+</head>
+<body>
+  <div class="headerDiv">
+    <div class='navBar'>
+      <a href="index.html">Home</a>
+      <a href="">About</a>
+    </div>
+    <div class="title"><a href="index.html">Hertz-UTS</a></div>
+    <div class='navBar'>
+      <a class="active" style="float: right;" href="carReservation.html">Car Reservation Cart</a>
+    </div>
+  </div>
+
+  <h2 class="h2">Checkout</h2>
+  <h3 class="h2">Please fill in your details</h3>
+
+  <form action="">
+    <table class="formTable">
+      <tr>
+        <td>First Name<span style="color:red">*</span></td><td class="tdInput"><input id="fName" class="formInput" type="text"></td>
+      </tr>
+      <tr>
+        <td>Last Name<span style="color:red">*</span></td><td class="tdInput"><input id="lName" class="formInput" type="text"></td>
+      </tr>
+      <tr>
+        <td>Email<span style="color:red">*</span></td><td class="tdInput"><input id="email" class="formInput" type="text"></td>
+      </tr>
+      <tr>
+        <td>Address<span style="color:red">*</span></td><td class="tdInput"><input id="address" class="formInput" type="text"></td>
+      </tr>
+      <tr>
+        <td>City<span style="color:red">*</span></td><td class="tdInput"><input id="city" class="formInput" type="text"></td>
+      </tr>
+      <tr>
+        <td>State<span style="color:red">*</span></td><td class="tdInput">
+          <select id="state" class="formInput">
+            <option value="Select State">Select State</option>
+            <option value="NSW">NSW</option>
+            <option value="ACT">ACT</option>
+            <option value="VIC">VIC</option>
+            <option value="SA">SA</option>
+            <option value="WA">WA</option>
+            <option value="NT">NT</option>
+            <option value="QLD">QLD</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Post code<span style="color:red;">*</span></td><td class="tdInput">
+          <input id="pCode" class="formInput" type="text" style="width: 192px;"></td>
+      </tr>
+      <tr>
+        <td>Payment type<span style="color:red">*</span></td><td class="tdInput">
+          <select id="paymentType" class="formInput">
+            <option value="Select Payment Type">Select Payment Type</option>
+            <option value="Visa">Visa</option>
+            <option value="Mastercard">Mastercard</option>
+            <option value="Paypal">Paypal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td></td><td></td>
+      </tr>
+      <tr>
+        <td><b>Total:</b></td><td id="totalCheckout"></td>
+      </tr>
+    </table>
+  </form>
+
+  <div class="confirmDiv">
+    <button class="cancelButton">Cancel</button>
+    <button class="confirmButton" onclick="validateForm()">Confirm</button>
+  </div>
+
+  <script type="text/javascript">
+  // Gets and displays total on page load
+  $(document).ready(() => {
+    $('#totalCheckout').html(`<b>$${sessionStorage.getItem('total')}</b>`);
+  });
+  // Validates form, returns error message if missing info
+  function validateForm() {
+    if (document.getElementById('fName').value === '') {
+      alert('* Please enter your First Name');
+      return false;
+    }
+    if (document.getElementById('lName').value === '') {
+      alert('* Please enter your Last Name');
+      return false;
+    }
+    function emailIsValid(emailStr) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailStr);
+    }
+
+    if (emailIsValid(document.getElementById('email').value) === false) {
+      alert('* Please enter a valid Email (username@mailserver.domain)');
+      return false;
+    }
+    if (document.getElementById('address').value === '') {
+      alert('* Please enter your Address');
+      return false;
+    }
+    if (document.getElementById('city').value === '') {
+      alert('* Please enter your City');
+      return false;
+    }
+    if (document.getElementById('state').value === 'Select State') {
+      alert('* Please enter your State');
+      return false;
+    }
+    if (document.getElementById('pCode').value === '') {
+      alert('* Please enter your Post Code');
+      return false;
+    }
+    if (document.getElementById('paymentType').value === 'Select Payment Type') {
+      alert('* Please select payment type');
+      return false;
+    }
+    sessionStorage.setItem('fName', document.getElementById('fName').value);
+    sessionStorage.setItem('lName', document.getElementById('lName').value);
+    sessionStorage.setItem('email', document.getElementById('email').value);
+    sessionStorage.setItem('address', document.getElementById('address').value);
+    sessionStorage.setItem('city', document.getElementById('city').value);
+    sessionStorage.setItem('state', document.getElementById('state').value);
+    sessionStorage.setItem('pCode', document.getElementById('pCode').value);
+    sessionStorage.setItem('paymentType', document.getElementById('paymentType').value);
+    location.href = 'confirmation.html';
+    return true;
+  }
+
+  $('.cancelButton').click(() => {
+    location.href = 'carReservation.html';
+  });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

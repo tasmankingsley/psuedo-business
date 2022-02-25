@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Confirmation</title>
+</head>
+<body>
+  <div class="headerDiv">
+    <div class='navBar'>
+      <a href="index.html">Home</a>
+      <a href="">About</a>
+    </div>
+    <div class="title"><a href="index.html">Hertz-UTS</a></div>
+    <div class='navBar'>
+      <a class="active" style="float: right;" href="carReservation.html">Car Reservation Cart</a>
+    </div>
+  </div>
+
+  <h2 class="h2">Confirm and Pay</h2>
+  <h3 class="h2">Please check your details and complete the transaction</h3>
+
+  <form action="">
+    <table class="formTable">
+      <tr>
+        <td id="name">First Name</td>
+      </tr>
+      <tr>
+        <td id="email">Email</td>
+      </tr>
+      <tr>
+        <td id="address">Address</td>
+      </tr>
+      <tr>
+        <td id="paymentType">Payment type</td>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="totalCheckout"></td>
+      </tr>
+    </table>
+  </form>
+
+  <div class="confirmDiv">
+    <button class="cancelButton">Back to Checkout</button>
+    <button class="confirmButton">Confirm and Pay</button>
+  </div>
+
+  <script type="text/javascript">
+  $(document).ready(() => {
+    $('#name').html(`${sessionStorage.getItem('fName')} ${sessionStorage.getItem('lName')}`);
+    $('#email').html(sessionStorage.getItem('email'));
+    $('#address').html(`${sessionStorage.getItem('address')}, ${sessionStorage.getItem('city')},
+    ${sessionStorage.getItem('state')}, ${sessionStorage.getItem('pCode')}`);
+    $('#paymentType').html(`Payment Type: ${sessionStorage.getItem('paymentType')}`);
+    $('#totalCheckout').html(`<b>Total to Pay: <b>$${sessionStorage.getItem('total')}`);
+  });
+
+  $('.confirmButton').click(() => {
+    alert(`${sessionStorage.getItem('fName')}, thank you for your purchase!
+    Your receipt has been sent to ${sessionStorage.getItem('email')}`);
+    location.href = 'index.html';
+  });
+
+  $('.cancelButton').click(() => {
+    location.href = 'checkout.html';
+  });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

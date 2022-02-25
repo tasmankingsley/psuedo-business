@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Car Reservation</title>
+</head>
+<body>
+  <div class="headerDiv">
+    <div class='navBar'>
+      <a href="index.html">Home</a>
+      <a href="">About</a>
+    </div>
+    <div class="title"><a href="index.html">Hertz-UTS</a></div>
+    <div class='navBar'>
+      <a class="active" class="test" style="float: right;" href="carReservation.html">Car Reservation Cart</a>
+    </div>
+  </div>
+  <h2 class="h2">Reservation Cart</h2>
+  <div class="tableDiv">
+    <table id="resTable">
+      <tr><th></th><th>Vehicle</th><th>Price per day</th><th>Rental days</th><th>Subtotal</th><th>Actions</th></tr>
+    </table>
+  </div>
+  <br>
+  <div>
+    <table class="totalTable">
+      <tr>
+        <th class="totalCells">Total</th>
+      </tr>
+      <tr>
+        <td id="total" class="totalCells"></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <div class="checkoutDiv">
+    <button class="clearButton">Clear all</button>
+    <button class="checkoutButton">Checkout</button>
+  </div>
+
+<script type="text/javascript">
+// Displays cart rows if session item present then calls calculateTotal()
+function displayRes(cars) {
+  const bIdArray = ['b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7', 'b8', 'b9', 'b10'];
+  const rIdArray = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7', 'r8', 'r9', 'r10'];
+  const rmIdArray = ['rm1', 'rm2', 'rm3', 'rm4', 'rm5', 'rm6', 'rm7', 'rm8', 'rm9', 'rm10'];
+
+  for (let i = 0; i < 10; i++) {
+    let itemID = bIdArray[i];
+    let rowID = rIdArray[i];
+    let removeID = rmIdArray[i];
+    if (sessionStorage.getItem(`${itemID}`) !== null) {
+      $('#resTable').append(`<tr id="${rowID}"><td><img class="carImg" src="images/${cars.car[i].Model}.jpg"></td>
+        <td>${cars.car[i].Brand} ${cars.car[i].Model} ${cars.car[i]['Model year']}</td>
+        <td class="cartPrice">${cars.car[i]['Price per day']}</td>
+        <td><input class="days" type="number" value="1" min="1" onchange="calculateTotal()"/></td>
+        <td class="subTotal"></td>
+        <td><button id="${removeID}" class="clear" onclick="removeItem(this.id)">Clear</button></td></tr>`);
+    }
+  }
+  calculateTotal();
+}
+// Get cars json object and call displayRes() to display table rows
+$(document).ready(() => {
+  $.ajax({
+    url: 'cars.json',
+    method: 'GET',
+    dataType: 'json',
+    cache: false,
+    success(response) {
+      const cars = response;
+      displayRes(cars);
+    },
+  });
+});
+
+// Remove the row and session item ID for the clear button clicked
+function removeItem(itemID) {
+  const bIdArray = ['b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7', 'b8', 'b9', 'b10'];
+  const rIdArray = ['#r1', '#r2', '#r3', '#r4', '#r5', '#r6', '#r7', '#r8', '#r9', '#r10'];
+  const rmIdArray = ['rm1', 'rm2', 'rm3', 'rm4', 'rm5', 'rm6', 'rm7', 'rm8', 'rm9', 'rm10'];
+
+  for (let i = 0; i < 10; i++) {
+    if (itemID === rmIdArray[i]) {
+      sessionStorage.removeItem(`${bIdArray[i]}`);
+      $(`${rIdArray[i]}`).remove();
+    }
+  }
+  calculateTotal();
+}
+
+$('.clearButton').click(() => {
+  sessionStorage.clear();
+  $('#r1, #r2, #r3, #r4, #r5, #r6, #r7, #r8, #r9, #r10 ').remove();
+  $('#total').html('');
+});
+
+// If there is an item in cart link to checkout, otherwise alert and return home
+$('.checkoutButton').click(() => {
+  if (sessionStorage.getItem('b1') !== null || sessionStorage.getItem('b2') !== null
+  || sessionStorage.getItem('b3') !== null || sessionStorage.getItem('b4') !== null
+  || sessionStorage.getItem('b5') !== null || sessionStorage.getItem('b6') !== null
+  || sessionStorage.getItem('b7') !== null || sessionStorage.getItem('b8') !== null
+  || sessionStorage.getItem('b9') !== null || sessionStorage.getItem('b10') !== null) {
+    location.href = 'checkout.html';
+  } else {
+    alert('No car has been reserved.');
+    location.href = 'index.html';
+  }
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>

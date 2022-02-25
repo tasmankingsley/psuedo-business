@@ -1,0 +1,124 @@
+{
+  "car": [
+    {
+      "Category": "Sedan",
+      "Availability": true,
+      "Brand": "Toyota",
+      "Model": "Camry",
+      "Model year": 2016,
+      "Mileage": 60000,
+      "Fuel type": "Petrol",
+      "Seats": 5,
+      "Price per day": "$100",
+      "Description": "The Toyota Camry is an automobile sold internationally by the Japanese manufacturer Toyota since 1982, spanning multiple generations."
+    },
+    {
+      "Category": "Sedan",
+      "Availability": true,
+      "Brand": "Toyota",
+      "Model": "86",
+      "Model year": 2020,
+      "Mileage": 4000,
+      "Fuel type": "Petrol",
+      "Seats": 4,
+      "Price per day": "$200",
+      "Description": "The 2+2 fastback coupé is noted for its naturally-aspirated boxer engine, front-engined, rear-wheel-drive configuration, 53/47 front/rear weight balance and low centre of gravity."
+    },
+    {
+      "Category": "Sedan",
+      "Availability": false,
+      "Brand": "Nissan",
+      "Model": "GT-R",
+      "Model year": 2020,
+      "Mileage": 8000,
+      "Fuel type": "Petrol",
+      "Seats": 2,
+      "Price per day": "$500",
+      "Description": "The Nissan GT-R is a high-performance sports car and grand tourer produced by Nissan that was unveiled in 2007. It is the successor to the Skyline GT-R, a high performance variant of the Nissan Skyline."
+    },
+    {
+      "Category": "Wagon",
+      "Availability": false,
+      "Brand": "Subaru",
+      "Model": "Forester",
+      "Model year": 2018,
+      "Mileage": 50000,
+      "Fuel type": "Petrol",
+      "Seats": 5,
+      "Price per day": "$120",
+      "Description": "The Subaru Forester is a Wagon/Crossover SUV that's been manufactured since 1997 by Subaru. Available in Japan from 1997, the Forester shares its platform with the Impreza."
+    },
+    {
+      "Category": "sedan",
+      "Availability": true,
+      "Brand": "BMW",
+      "Model": "M2",
+      "Model year": 2020,
+      "Mileage": 6000,
+      "Fuel type": "Petrol",
+      "Seats": 2,
+      "Price per day": "$350",
+      "Description": "The BMW M2 is a high-performance version of the BMW 2 Series automobile developed by BMW's motorsport division, BMW M GmbH."
+    },
+    {
+      "Category": "Sedan",
+      "Availability": false,
+      "Brand": "BMW",
+      "Model": "320i",
+      "Model year": 2016,
+      "Mileage": 40000,
+      "Fuel type": "Petrol",
+      "Seats": 5,
+      "Price per day": "$200",
+      "Description": "The 3 Series is BMW's best-selling model, accounting for around 30% of the BMW brand's annual total sales. The BMW 3 Series has won numerous awards throughout its history."
+    },
+    {
+      "Category": "SUV",
+      "Availability": true,
+      "Brand": "Mazda",
+      "Model": "CX-5",
+      "Model year": 2019,
+      "Mileage": 45000,
+      "Fuel type": "Petrol",
+      "Seats": 5,
+      "Price per day": "$150",
+      "Description": "The Mazda CX-5 is a compact crossover SUV produced by Mazda starting in 2012 for the 2013 model year lineup. It is Mazda's first car featuring its Kodo design language."
+    },
+    {
+      "Category": "Hatch-back",
+      "Availability": true,
+      "Brand": "Mazda",
+      "Model": "3",
+      "Model year": 2017,
+      "Mileage": 55000,
+      "Fuel type": "Petrol",
+      "Seats": 5,
+      "Price per day": "$130",
+      "Description": "The Mazda 3 is a compact car manufactured in Japan by Mazda. It was introduced in 2003 as a 2004 model, replacing the Familia/323/Protegé in the C-segment."
+    },
+    {
+      "Category": "Hatch-back",
+      "Availability": true,
+      "Brand": "Volkswagen",
+      "Model": "Golf",
+      "Model year": 2019,
+      "Mileage": 30000,
+      "Fuel type": "Petrol",
+      "Seats": 5,
+      "Price per day": "$150",
+      "Description": "The Volkswagen Golf is a compact car produced by the German automotive manufacturer Volkswagen since 1974, marketed worldwide across eight generations, in various body configurations and under various nameplates."
+    },
+    {
+      "Category": "Sedan",
+      "Availability": true,
+      "Brand": "Honda",
+      "Model": "Civic",
+      "Model year": 2018,
+      "Mileage": 44000,
+      "Fuel type": "Petrol",
+      "Seats": 5,
+      "Price per day": "$115",
+      "Description": "The Honda Civic is a line of cars manufactured by Honda. Originally a subcompact, the Civic has gone through several generational changes, becoming both larger and more upscale, moving into the compact car segment."
+    }
+  ]
+}

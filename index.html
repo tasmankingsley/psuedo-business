@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Hertz-UTS</title>
+</head>
+<body>
+  <div class="headerDiv">
+    <div class='navBar'>
+      <a class="active" href="index.html">Home</a>
+      <a href="">About</a>
+    </div>
+    <div class="title"><a href="index.html">Hertz-UTS</a></div>
+    <div class='navBar'>
+      <a style="float: right;" href="carReservation.html">Car Reservation Cart</a>
+    </div>
+  </div>
+  <div class="filterDiv">
+    <div style="align-self: left;">
+      <span>Filter by: </span>
+      <button id="sedanFilter" class="filter">Sedan</button>
+      <button id="hatchFilter" class="filter">Hatchback</button>
+      <button id="suvFilter" class="filter">SUV/Wagon</button>
+    </div>
+
+<!-- To implement
+    <div style="align-self: right;">
+      <span>Sort by: </span>
+      <button id="sedanFilter" class="filter">Price</button>
+      <button id="sedanFilter" class="filter">Brand</button>
+      </div>
+-->
+  </div>
+  <div class="container">
+    <div id="div1" class="carDiv">
+      <img class="carImg" src="images/Camry.jpg">
+      <h2 id="t1"></h2>
+      <p id="p1"></p>
+      <button id="b1" class="button" onclick="addRes(this.id)">Add to reservation</button>
+    </div>
+    <div id="div2" class="carDiv">
+      <img class="carImg" src="images/86.jpg">
+      <h2 id="t2"></h2>
+      <p id="p2"></p>
+      <button id="b2" class="button" onclick="addRes(this.id)">Add to reservation</button>
+    </div>
+    <div id="div3" class="carDiv">
+      <img class="carImg" src="images/GT-R.jpg">
+      <h2 id="t3"></h2>
+      <p id="p3"></p>
+      <button id="b3" class="button" onclick="addRes(this.id)">Add to reservation</button>
+    </div>
+    <div id="div4" class="carDiv">
+      <img class="carImg" src="images/Forester.jpg">
+      <h2 id="t4"></h2>
+      <p id="p4"></p>
+      <button id="b4" class="button" onclick="addRes(this.id)">Add to reservation</button>
+    </div>
+    <div id="div5" class="carDiv">
+      <img class="carImg" src="images/M2.jpg">
+      <h2 id="t5"></h2>
+      <p id="p5"></p>
+      <button id="b5" class="button" onclick="addRes(this.id)">Add to reservation</button>
+    </div>
+    <div id="div6" class="carDiv">
+      <img class="carImg" src="images/320i.jpg">
+      <h2 id="t6"></h2>
+      <p id="p6"></p>
+      <button id="b6" class="button" onclick="addRes(this.id)">Add to reservation</button>
+    </div>
+    <div id="div7" class="carDiv">
+      <img class="carImg" src="images/CX-5.jpg">
+      <h2 id="t7"></h2>
+      <p id="p7"></p>
+      <button id="b7" class="button" onclick="addRes(this.id)">Add to reservation</button>
+    </div>
+    <div id="div8" class="carDiv">
+      <img class="carImg" src="images/3.jpg">
+      <h2 id="t8"></h2>
+      <p id="p8"></p>
+      <button id="b8" class="button" onclick="addRes(this.id)">Add to reservation</button>
+    </div>
+    <div id="div9" class="carDiv">
+      <img class="carImg" src="images/Golf.jpg">
+      <h2 id="t9"></h2>
+      <p id="p9"></p>
+      <button id="b9" class="button" onclick="addRes(this.id)">Add to reservation</button>
+    </div>
+    <div id="div10" class="carDiv">
+      <img class="carImg" src="images/Civic.jpg">
+      <h2 id="t10"></h2>
+      <p id="p10"></p>
+      <button id="b10" class="button" onclick="addRes(this.id)">Add to reservation</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Attributions:
+Wikipedia for car descriptions eg https://en.wikipedia.org/wiki/Nissan_GT-R
+-->

@@ -1,0 +1,322 @@
+html{
+  font-family: helvetica, sans-serif;
+  background-color: #282a36;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.headerDiv {
+  display: flex;
+  background-color: #282a36;
+}
+
+.filterDiv {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #282a36;
+  padding: 15px 10px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.7em;
+  color: #fff;
+  width: 40%;
+  padding: 5px 0px;
+}
+
+.title a {
+  color: #f1fa8c;
+}
+
+.navBar {
+  width: 30%;
+}
+
+.navBar a {
+  float: left;
+  color: #bd93f9;
+  text-align: center;
+  padding: 13px 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navBar a:hover {
+  background-color: #f1fa8c;
+  color: #282a36;
+}
+
+.navBar a.active {
+  background-color: #8be9fd;
+  color: #282a36;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  background-color: #282a36;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.carDiv {
+  background-color: #fff;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 600px;
+  width: 400px;
+  text-align: left;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+.carImg {
+  max-width: 400px;
+}
+
+.button {
+  background-color: #fff;
+  border: 2px solid #8be9fd;
+  color: black;
+  cursor: pointer;
+  font-size: 18px;
+  height: 60px;
+  padding: 15px 32px;
+  text-align: center;
+  transition-duration: 0.3s;
+  position: relative;
+  justify-content: flex-end;
+  left: 5%;
+  bottom: 15px;
+  width: 90%;
+  border-radius: 15px;
+}
+
+.button:hover {
+  background-color: #8be9fd;
+  color: #fff;
+}
+
+.checkoutButton {
+  background-color: #fff;
+  border: 2px solid #8be9fd;
+  color: black;
+  cursor: pointer;
+  font-size: 18px;
+  height: 60px;
+  padding: 15px 32px;
+  text-align: center;
+  transition-duration: 0.3s;
+  position: relative;
+  width: 40%;
+  border-radius: 15px;
+}
+
+.checkoutButton:hover {
+  background-color: #8be9fd;
+  color: #fff;
+}
+
+.clearButton {
+  background-color: #fff;
+  border: 2px solid #ff5555;
+  color: black;
+  cursor: pointer;
+  font-size: 18px;
+  height: 60px;
+  padding: 15px 32px;
+  text-align: center;
+  transition-duration: 0.3s;
+  position: relative;
+  width: 40%;
+  border-radius: 15px;
+}
+
+.clearButton:hover {
+  background-color: #ff5555;
+  color: #fff;
+}
+
+.confirmButton {
+  background-color: #fff;
+  border: 2px solid #8be9fd;
+  color: black;
+  cursor: pointer;
+  font-size: 18px;
+  height: 60px;
+  padding: 15px 32px;
+  text-align: center;
+  transition-duration: 0.3s;
+  position: relative;
+  width: 40%;
+  border-radius: 15px;
+}
+
+.confirmButton:hover {
+  background-color: #8be9fd;
+  color: #fff;
+}
+.cancelButton {
+  background-color: #fff;
+  border: 2px solid #ff5555;
+  color: black;
+  cursor: pointer;
+  font-size: 18px;
+  height: 60px;
+  padding: 15px 32px;
+  text-align: center;
+  transition-duration: 0.3s;
+  position: relative;
+  width: 40%;
+  border-radius: 15px;
+}
+
+.cancelButton:hover {
+  background-color: #ff5555;
+  color: #fff;
+}
+
+.clear {
+  background-color: #fff;
+  border: 2px solid #ff5555;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  height: 40px;
+  padding: 5px 32px;
+  text-align: center;
+  transition-duration: 0.3s;
+  position: relative;
+}
+
+.clear:hover {
+  background-color: #ff5555;
+  color: #fff;
+}
+
+.filter {
+  padding: 5px 20px;
+  margin: 0px 5px;
+  font-size: 15px;
+  border-radius: 30px;
+  border: 1.5px solid #fff;
+  background-color: #282a36;
+  color: #fff;
+  text-align: center;
+}
+
+.filter:hover {
+  background: rgba(189, 147, 249, 0.7)
+}
+
+.liveFilter {
+  background-color: #bd93f9;
+  color: white;
+}
+
+span {
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 15px;
+}
+
+.tdInput {
+  width: 80%;
+}
+
+input {
+  width: 50%;
+  height: 25px;
+  font-size: 15px;
+}
+
+.tableDiv {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.formInput {
+  width: 95%;
+}
+
+
+#state, #paymentType {
+  width: 200px;
+  height: 25px;
+  font-size: 16px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 90%;
+  border: none;
+  padding: 2px 5px;
+  text-align: left;
+}
+
+td, th {
+  background-color: white;
+  font-size: 16px;
+  border: none;
+  height: 30px;
+  padding: 2px 5px;
+  text-align: left;
+}
+
+th {
+  background-color: #bd93f9;
+  font-size: 17px;
+}
+
+.formTable {
+  margin-top: 40px;
+  width: 70%;
+}
+
+.formTable td {
+  background-color: #282a36;
+  color: white;
+}
+
+.checkoutDiv {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+.confirmDiv {
+  display: flex;
+  justify-content: space-around;
+  margin: 10%;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+.h2 {
+  color: white;
+  text-align: center;
+  font-weight: 100;
+}
+
+.totalCells {
+  float: right;
+  width: 20%;
+}
