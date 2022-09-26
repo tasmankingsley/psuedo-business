@@ -1,6 +1,6 @@
 html{
   font-family: helvetica, sans-serif;
-  background-color: #282a36;
+  background-color: #181a20;
 }
 
 body {
@@ -11,18 +11,21 @@ body {
 
 a {
   text-decoration: none;
+  height: 40px;
+  line-height: 40px;
   color: white;
 }
 
 .headerDiv {
   display: flex;
   background-color: #282a36;
+  border-bottom: 1px solid #fff;
 }
 
 .filterDiv {
   display: flex;
   flex-wrap: wrap;
-  background-color: #282a36;
+  /* background-color: #282a36; */
   padding: 15px 10px;
 }
 
@@ -44,7 +47,7 @@ a {
 
 .navBar a {
   float: left;
-  color: #bd93f9;
+  color: #f1fa8c;
   text-align: center;
   padding: 13px 20px;
   text-decoration: none;
@@ -65,7 +68,7 @@ a {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  background-color: #282a36;
+  /* background-color: #181a20; */
   height: 100%;
   width: 100%;
   padding-bottom: 80px;
@@ -73,26 +76,27 @@ a {
 
 .carDiv {
   background-color: #fff;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 20px;
   height: 600px;
-  width: 400px;
+  width: 360px;
   text-align: left;
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .carImg {
   max-width: 400px;
+  border-radius: 10px;
 }
 
 .button {
-  background-color: #fff;
+  background-color: #282a35;
   border: 2px solid #8be9fd;
-  color: black;
+  color: #fff;
   cursor: pointer;
   font-size: 18px;
   height: 60px;
@@ -104,7 +108,7 @@ a {
   left: 5%;
   bottom: 15px;
   width: 90%;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .button:hover {
@@ -124,7 +128,7 @@ a {
   transition-duration: 0.3s;
   position: relative;
   width: 40%;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .checkoutButton:hover {
@@ -144,7 +148,7 @@ a {
   transition-duration: 0.3s;
   position: relative;
   width: 40%;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .clearButton:hover {
@@ -164,7 +168,7 @@ a {
   transition-duration: 0.3s;
   position: relative;
   width: 40%;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .confirmButton:hover {
@@ -183,7 +187,7 @@ a {
   transition-duration: 0.3s;
   position: relative;
   width: 40%;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .cancelButton:hover {
@@ -202,6 +206,7 @@ a {
   text-align: center;
   transition-duration: 0.3s;
   position: relative;
+  border-radius: 5px;
 }
 
 .clear:hover {
@@ -221,7 +226,8 @@ a {
 }
 
 .filter:hover {
-  background: rgba(189, 147, 249, 0.7)
+  background: rgba(189, 147, 249, 0.7);
+  cursor: pointer;
 }
 
 .liveFilter {
@@ -281,13 +287,17 @@ td, th {
 }
 
 th {
-  background-color: #bd93f9;
+  background-color: #f3f99a;
   font-size: 17px;
 }
 
-.formTable {
-  margin-top: 40px;
+
+form {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #282a36;
   width: 70%;
+  margin: auto;
 }
 
 .formTable td {
